@@ -7,7 +7,6 @@ app.use(express.json())
 
 app.use(express.static(path.join(__dirname, '../frontend')))
 
-// Assurez-vous que createTable est défini ailleurs dans votre code
 app.get('/', (req, res)=>{
    res.sendFile(path.join(__dirname, "../frontend", "index.html"));
 });
