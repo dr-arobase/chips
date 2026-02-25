@@ -101,7 +101,10 @@
                 document.body.style.overflow = '';
             }
 
+            // Add lazy-loading attribute to images for better mobile performance
             getCards().forEach(function (card) {
+                const img = card.querySelector('img');
+                if (img && !img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
                 card.addEventListener('click', function () {
                     openAt(visible().indexOf(card));
                 });
@@ -118,14 +121,36 @@
                 if (e.key === 'ArrowRight') openAt(current + 1);
             });
 
-            // Swipe mobile
-            var touchX = 0;
+            // Swipe mobile & double-tap close
+            var touchX = 0, lastTap = 0;
             if (lightbox) {
-                lightbox.addEventListener('touchstart', function (e) { touchX = e.touches[0].clientX; }, { passive: true });
-                lightbox.addEventListener('touchend',   function (e) {
+                lightbox.addEventListener('touchstart', function (e) {
+                    touchX = e.touches[0].clientX;
+                }, { passive: true });
+                lightbox.addEventListener('touchend', function (e) {
                     var dx = e.changedTouches[0].clientX - touchX;
-                    if (Math.abs(dx) > 50) openAt(dx < 0 ? current + 1 : current - 1);
-                });
+                    // swipe threshold scaled for small screens
+                    var threshold = Math.min(window.innerWidth * 0.12, 60);
+                    if (Math.abs(dx) > threshold) {
+                        openAt(dx < 0 ? current + 1 : current - 1);
+                        return;
+                    }
+                    // double-tap to close
+                    var now = Date.now();
+                    if (now - lastTap < 350) { closeLB(); }
+                    lastTap = now;
+                }, { passive: true });
+
+                // On small screens, make the lightbox content take the whole screen
+                function adjustLBForViewport() {
+                    if (window.innerWidth <= 480) {
+                        lightbox.classList.add('mobile');
+                    } else {
+                        lightbox.classList.remove('mobile');
+                    }
+                }
+                window.addEventListener('resize', adjustLBForViewport);
+                adjustLBForViewport();
             }
 
             // ── Bouton retour en haut ─────────────────────────────────────────
