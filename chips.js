@@ -9,6 +9,7 @@
             const noResults   = document.getElementById('no-results');
             const btnGrid     = document.getElementById('btn-grid');
             const btnList     = document.getElementById('btn-list');
+            const btnSvg      = document.getElementById('btn-svg-toggle');
             const backTop     = document.getElementById('back-to-top');
             const lightbox    = document.getElementById('lightbox');
             const lbImg       = document.getElementById('lightbox-img');
@@ -99,6 +100,41 @@
             function closeLB() {
                 lightbox.classList.remove('open');
                 document.body.style.overflow = '';
+            }
+
+            // ── Cacher les chips SVG au chargement ────────────────────────
+            var svgVisible = false;
+            function getSvgCards() {
+                return getCards().filter(function (c) {
+                    var src = (c.querySelector('img') || {}).src || '';
+                    return src.toLowerCase().endsWith('.svg');
+                });
+            }
+            function hideSvgCards() {
+                getSvgCards().forEach(function (c) { c.classList.add('hidden'); });
+            }
+            function showSvgCards() {
+                getSvgCards().forEach(function (c) { c.classList.remove('hidden'); });
+            }
+            hideSvgCards();
+            updateCount();
+
+            if (btnSvg) {
+                btnSvg.addEventListener('click', function () {
+                    svgVisible = !svgVisible;
+                    if (svgVisible) {
+                        showSvgCards();
+                        btnSvg.classList.add('active');
+                        btnSvg.querySelector('i').className = 'fa-solid fa-eye';
+                        btnSvg.title = 'Cacher les chips SVG';
+                    } else {
+                        hideSvgCards();
+                        btnSvg.classList.remove('active');
+                        btnSvg.querySelector('i').className = 'fa-solid fa-eye-slash';
+                        btnSvg.title = 'Afficher les chips SVG';
+                    }
+                    updateCount();
+                });
             }
 
             // Add lazy-loading attribute to images for better mobile performance
