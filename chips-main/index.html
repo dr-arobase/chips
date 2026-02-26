@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chips Bizarres</title>
+    <link rel="icon" href="img.jpg">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════════════ -->
+<header>
+    <div class="header-inner">
+        <img class="header-icon" src="img.jpg" alt="Logo chips">
+        <div>
+            <h1>Les Chips aux Formes Bizarres</h1>
+            <p class="header-subtitle">
+                <i class="fa-solid fa-star"></i>
+                Une collection unique de chips aux formes insolites
+                <i class="fa-solid fa-star"></i>
+            </p>
+        </div>
+    </div>
+
+    <!-- Barre d'outils -->
+    <div class="toolbar">
+        <!-- Recherche -->
+        <div class="search-wrap">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="search" id="search" placeholder="Rechercher une chips...">
+        </div>
+
+        <!-- Tri -->
+        <div class="sort-wrap">
+            <i class="fa-solid fa-arrow-up-wide-short"></i>
+            <select id="sort-select">
+                <option value="asc">Croissant</option>
+                <option value="desc">Décroissant</option>
+                <option value="random">Aléatoire</option>
+            </select>
+        </div>
+
+        <!-- Vue grille / liste -->
+        <div class="view-btns">
+            <button id="btn-grid" class="view-btn active" title="Vue grille">
+                <i class="fa-solid fa-grip"></i>
+            </button>
+            <button id="btn-list" class="view-btn" title="Vue liste">
+                <i class="fa-solid fa-list"></i>
+            </button>
+        </div>
+
+        <!-- Toggle SVG -->
+        <button id="btn-svg-toggle" class="svg-toggle-btn" title="Afficher / Cacher les chips SVG">
+            <i class="fa-solid fa-eye-slash"></i>
+            <span>SVG</span>
+        </button>
+    </div>
+
+    <!-- Badge compteur -->
+    <span class="chip-count" id="chip-count">
+        <i class="fa-solid fa-layer-group"></i> — chips
+    </span>
+</header>
+
+<!-- ══ MAIN ════════════════════════════════════════════════════════════ -->
+<main>
+    <section class="gallery" id="gallery" aria-label="Galerie des chips">
+        <p id="no-results">
+            <i class="fa-solid fa-face-sad-tear"></i>
+            Aucune chips trouvée
+        </p>
+        <!-- GALLERY:START -->
+    <figure class="chip-card"><img src="image/chips 1.webp" alt="Chips 1"><figcaption>Chips 1</figcaption></figure>
+    <figure class="chip-card"><img src="image/chips 2.jpg" alt="Chips 2"><figcaption>Chips 2</figcaption></figure>
+    <figure class="chip-card"><img src="image/chips 3.webp" alt="Chips 3"><figcaption>Chips 3</figcaption></figure>
+    <figure class="chip-card"><img src="image/chips 4.jpg" alt="Chips 4"><figcaption>Chips 4</figcaption></figure>
+    <figure class="chip-card"><img src="image/chips 5.jpg" alt="Chips 5"><figcaption>Chips 5</figcaption></figure>
+    <figure class="chip-card"><img src="image/chips 6.png" alt="Chips 6"><figcaption>Chips 6</figcaption></figure>
+    <figure class="chip-card"><img src="image/chips 7.webp" alt="Chips 7"><figcaption>Chips 7</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 8.webp" alt="Chips 8"><figcaption>Chips 8</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 9.jpg" alt="Chips 9"><figcaption>Chips 9</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 10.webp" alt="Chips 10"><figcaption>Chips 10</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 11.jpg" alt="Chips 11"><figcaption>Chips 11</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 12.jpg" alt="Chips 12"><figcaption>Chips 12</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 13.jpg" alt="Chips 13"><figcaption>Chips 13</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 14.webp" alt="Chips 14"><figcaption>Chips 14</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 15.jpg" alt="Chips 15"><figcaption>Chips 15</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 16.jpg" alt="Chips 16"><figcaption>Chips 16</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 17.jpg" alt="Chips 17"><figcaption>Chips 17</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 18.jpg" alt="Chips 18"><figcaption>Chips 18</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 19.jpg" alt="Chips 19"><figcaption>Chips 19</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 20.webp" alt="Chips 20"><figcaption>Chips 20</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 21.png" alt="Chips 21"><figcaption>Chips 21</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 22.jpg" alt="Chips 22"><figcaption>Chips 22</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 23.jpg" alt="Chips 23"><figcaption>Chips 23</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 24.jpg" alt="Chips 24"><figcaption>Chips 24</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 25.webp" alt="Chips 25"><figcaption>Chips 25</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 26.jpg" alt="Chips 26"><figcaption>Chips 26</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 27.jpg" alt="Chips 27"><figcaption>Chips 27</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 28.jpg" alt="Chips 28"><figcaption>Chips 28</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 29.jpg" alt="Chips 29"><figcaption>Chips 29</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 30.jpg" alt="Chips 30"><figcaption>Chips 30</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 31.png" alt="Chips 31"><figcaption>Chips 31</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 32.webp" alt="Chips 32"><figcaption>Chips 32</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 33.jpg" alt="Chips 33"><figcaption>Chips 33</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 34.webp" alt="Chips 34"><figcaption>Chips 34</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 35.webp" alt="Chips 35"><figcaption>Chips 35</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 36.webp" alt="Chips 36"><figcaption>Chips 36</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 37.webp" alt="Chips 37"><figcaption>Chips 37</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 38.avif" alt="Chips 38"><figcaption>Chips 38</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 39.webp" alt="Chips 39"><figcaption>Chips 39</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 40.jpg" alt="Chips 40"><figcaption>Chips 40</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 41.webp" alt="Chips 41"><figcaption>Chips 41</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 42.jpg" alt="Chips 42"><figcaption>Chips 42</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 43.webp" alt="Chips 43"><figcaption>Chips 43</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 44.jpg" alt="Chips 44"><figcaption>Chips 44</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 45.jpg" alt="Chips 45"><figcaption>Chips 45</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 46.webp" alt="Chips 46"><figcaption>Chips 46</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 47.jpg" alt="Chips 47"><figcaption>Chips 47</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 48.jpg" alt="Chips 48"><figcaption>Chips 48</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 49.webp" alt="Chips 49"><figcaption>Chips 49</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 50.webp" alt="Chips 50"><figcaption>Chips 50</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 51.webp" alt="Chips 51"><figcaption>Chips 51</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 52.jpg" alt="Chips 52"><figcaption>Chips 52</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 53.jpg" alt="Chips 53"><figcaption>Chips 53</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 54.webp" alt="Chips 54"><figcaption>Chips 54</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 55.jpg" alt="Chips 55"><figcaption>Chips 55</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 56.webp" alt="Chips 56"><figcaption>Chips 56</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 57.webp" alt="Chips 57"><figcaption>Chips 57</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 58.webp" alt="Chips 58"><figcaption>Chips 58</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 59.webp" alt="Chips 59"><figcaption>Chips 59</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 60.jpg" alt="Chips 60"><figcaption>Chips 60</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 61.webp" alt="Chips 61"><figcaption>Chips 61</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 62.webp" alt="Chips 62"><figcaption>Chips 62</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 63.jpg" alt="Chips 63"><figcaption>Chips 63</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 64.webp" alt="Chips 64"><figcaption>Chips 64</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 65.webp" alt="Chips 65"><figcaption>Chips 65</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 66.jpg" alt="Chips 66"><figcaption>Chips 66</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 67.webp" alt="Chips 67"><figcaption>Chips 67</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 68.jpg" alt="Chips 68"><figcaption>Chips 68</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 69.webp" alt="Chips 69"><figcaption>Chips 69</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 70.jpg" alt="Chips 70"><figcaption>Chips 70</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 71.webp" alt="Chips 71"><figcaption>Chips 71</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 72.webp" alt="Chips 72"><figcaption>Chips 72</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 73.jpg" alt="Chips 73"><figcaption>Chips 73</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 74.jpg" alt="Chips 74"><figcaption>Chips 74</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 75.jpg" alt="Chips 75"><figcaption>Chips 75</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 76.jpg" alt="Chips 76"><figcaption>Chips 76</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 77.webp" alt="Chips 77"><figcaption>Chips 77</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 78.jpg" alt="Chips 78"><figcaption>Chips 78</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 79.jpg" alt="Chips 79"><figcaption>Chips 79</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 80.jpg" alt="Chips 80"><figcaption>Chips 80</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 81.jpg" alt="Chips 81"><figcaption>Chips 81</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 82.jpg" alt="Chips 82"><figcaption>Chips 82</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 83.jpg" alt="Chips 83"><figcaption>Chips 83</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 84.jpg" alt="Chips 84"><figcaption>Chips 84</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 85.jpg" alt="Chips 85"><figcaption>Chips 85</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 86.jpg" alt="Chips 86"><figcaption>Chips 86</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 87.jpg" alt="Chips 87"><figcaption>Chips 87</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 88.jpg" alt="Chips 88"><figcaption>Chips 88</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 89.jpg" alt="Chips 89"><figcaption>Chips 89</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 90.jpg" alt="Chips 90"><figcaption>Chips 90</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 91.webp" alt="Chips 91"><figcaption>Chips 91</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 92.webp" alt="Chips 92"><figcaption>Chips 92</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 93.webp" alt="Chips 93"><figcaption>Chips 93</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 94.webp" alt="Chips 94"><figcaption>Chips 94</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 95.webp" alt="Chips 95"><figcaption>Chips 95</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 96.jpg" alt="Chips 96"><figcaption>Chips 96</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 97.jpg" alt="Chips 97"><figcaption>Chips 97</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 98.webp" alt="Chips 98"><figcaption>Chips 98</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 99.svg" alt="Chips 99"><figcaption>Chips 99</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 100.svg" alt="Chips 100"><figcaption>Chips 100</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 101.svg" alt="Chips 101"><figcaption>Chips 101</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 102.svg" alt="Chips 102"><figcaption>Chips 102</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 103.svg" alt="Chips 103"><figcaption>Chips 103</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 104.svg" alt="Chips 104"><figcaption>Chips 104</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 105.svg" alt="Chips 105"><figcaption>Chips 105</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 106.svg" alt="Chips 106"><figcaption>Chips 106</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 107.svg" alt="Chips 107"><figcaption>Chips 107</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 108.svg" alt="Chips 108"><figcaption>Chips 108</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 109.svg" alt="Chips 109"><figcaption>Chips 109</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 110.svg" alt="Chips 110"><figcaption>Chips 110</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 111.svg" alt="Chips 111"><figcaption>Chips 111</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 112.svg" alt="Chips 112"><figcaption>Chips 112</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 113.svg" alt="Chips 113"><figcaption>Chips 113</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 114.svg" alt="Chips 114"><figcaption>Chips 114</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 115.svg" alt="Chips 115"><figcaption>Chips 115</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 116.svg" alt="Chips 116"><figcaption>Chips 116</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 117.svg" alt="Chips 117"><figcaption>Chips 117</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 118.svg" alt="Chips 118"><figcaption>Chips 118</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 119.svg" alt="Chips 119"><figcaption>Chips 119</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 120.svg" alt="Chips 120"><figcaption>Chips 120</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 121.svg" alt="Chips 121"><figcaption>Chips 121</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 122.svg" alt="Chips 122"><figcaption>Chips 122</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 123.svg" alt="Chips 123"><figcaption>Chips 123</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 124.svg" alt="Chips 124"><figcaption>Chips 124</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 125.svg" alt="Chips 125"><figcaption>Chips 125</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 126.svg" alt="Chips 126"><figcaption>Chips 126</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 127.svg" alt="Chips 127"><figcaption>Chips 127</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 128.svg" alt="Chips 128"><figcaption>Chips 128</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 129.svg" alt="Chips 129"><figcaption>Chips 129</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 130.svg" alt="Chips 130"><figcaption>Chips 130</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 131.svg" alt="Chips 131"><figcaption>Chips 131</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 132.svg" alt="Chips 132"><figcaption>Chips 132</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 133.svg" alt="Chips 133"><figcaption>Chips 133</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 134.svg" alt="Chips 134"><figcaption>Chips 134</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 135.svg" alt="Chips 135"><figcaption>Chips 135</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 136.svg" alt="Chips 136"><figcaption>Chips 136</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 137.svg" alt="Chips 137"><figcaption>Chips 137</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 138.svg" alt="Chips 138"><figcaption>Chips 138</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 139.svg" alt="Chips 139"><figcaption>Chips 139</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 140.svg" alt="Chips 140"><figcaption>Chips 140</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 141.svg" alt="Chips 141"><figcaption>Chips 141</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 142.svg" alt="Chips 142"><figcaption>Chips 142</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 143.svg" alt="Chips 143"><figcaption>Chips 143</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 144.svg" alt="Chips 144"><figcaption>Chips 144</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 145.svg" alt="Chips 145"><figcaption>Chips 145</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 146.svg" alt="Chips 146"><figcaption>Chips 146</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 147.svg" alt="Chips 147"><figcaption>Chips 147</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 148.svg" alt="Chips 148"><figcaption>Chips 148</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 149.svg" alt="Chips 149"><figcaption>Chips 149</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 150.svg" alt="Chips 150"><figcaption>Chips 150</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 151.svg" alt="Chips 151"><figcaption>Chips 151</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 152.svg" alt="Chips 152"><figcaption>Chips 152</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 153.svg" alt="Chips 153"><figcaption>Chips 153</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 154.svg" alt="Chips 154"><figcaption>Chips 154</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 155.svg" alt="Chips 155"><figcaption>Chips 155</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 156.svg" alt="Chips 156"><figcaption>Chips 156</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 157.svg" alt="Chips 157"><figcaption>Chips 157</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 158.svg" alt="Chips 158"><figcaption>Chips 158</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 159.svg" alt="Chips 159"><figcaption>Chips 159</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 160.svg" alt="Chips 160"><figcaption>Chips 160</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 161.svg" alt="Chips 161"><figcaption>Chips 161</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 162.svg" alt="Chips 162"><figcaption>Chips 162</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 163.svg" alt="Chips 163"><figcaption>Chips 163</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 164.svg" alt="Chips 164"><figcaption>Chips 164</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 165.svg" alt="Chips 165"><figcaption>Chips 165</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 166.svg" alt="Chips 166"><figcaption>Chips 166</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 167.svg" alt="Chips 167"><figcaption>Chips 167</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 168.svg" alt="Chips 168"><figcaption>Chips 168</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 169.svg" alt="Chips 169"><figcaption>Chips 169</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 170.svg" alt="Chips 170"><figcaption>Chips 170</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 171.svg" alt="Chips 171"><figcaption>Chips 171</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 172.svg" alt="Chips 172"><figcaption>Chips 172</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 173.svg" alt="Chips 173"><figcaption>Chips 173</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 174.svg" alt="Chips 174"><figcaption>Chips 174</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 175.svg" alt="Chips 175"><figcaption>Chips 175</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 176.svg" alt="Chips 176"><figcaption>Chips 176</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 177.svg" alt="Chips 177"><figcaption>Chips 177</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 178.svg" alt="Chips 178"><figcaption>Chips 178</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 179.svg" alt="Chips 179"><figcaption>Chips 179</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 180.svg" alt="Chips 180"><figcaption>Chips 180</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 181.svg" alt="Chips 181"><figcaption>Chips 181</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 182.svg" alt="Chips 182"><figcaption>Chips 182</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 183.svg" alt="Chips 183"><figcaption>Chips 183</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 184.svg" alt="Chips 184"><figcaption>Chips 184</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 185.svg" alt="Chips 185"><figcaption>Chips 185</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 186.svg" alt="Chips 186"><figcaption>Chips 186</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 187.svg" alt="Chips 187"><figcaption>Chips 187</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 188.svg" alt="Chips 188"><figcaption>Chips 188</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 189.svg" alt="Chips 189"><figcaption>Chips 189</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 190.svg" alt="Chips 190"><figcaption>Chips 190</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 191.svg" alt="Chips 191"><figcaption>Chips 191</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 192.svg" alt="Chips 192"><figcaption>Chips 192</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 193.svg" alt="Chips 193"><figcaption>Chips 193</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 194.svg" alt="Chips 194"><figcaption>Chips 194</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 195.svg" alt="Chips 195"><figcaption>Chips 195</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 196.svg" alt="Chips 196"><figcaption>Chips 196</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 197.svg" alt="Chips 197"><figcaption>Chips 197</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 198.svg" alt="Chips 198"><figcaption>Chips 198</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 199.svg" alt="Chips 199"><figcaption>Chips 199</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 200.svg" alt="Chips 200"><figcaption>Chips 200</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 201.svg" alt="Chips 201"><figcaption>Chips 201</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 202.svg" alt="Chips 202"><figcaption>Chips 202</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 203.svg" alt="Chips 203"><figcaption>Chips 203</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 204.svg" alt="Chips 204"><figcaption>Chips 204</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 205.svg" alt="Chips 205"><figcaption>Chips 205</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 206.svg" alt="Chips 206"><figcaption>Chips 206</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 207.svg" alt="Chips 207"><figcaption>Chips 207</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 208.svg" alt="Chips 208"><figcaption>Chips 208</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 209.svg" alt="Chips 209"><figcaption>Chips 209</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 210.svg" alt="Chips 210"><figcaption>Chips 210</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 211.svg" alt="Chips 211"><figcaption>Chips 211</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 212.svg" alt="Chips 212"><figcaption>Chips 212</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 213.svg" alt="Chips 213"><figcaption>Chips 213</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 214.svg" alt="Chips 214"><figcaption>Chips 214</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 215.svg" alt="Chips 215"><figcaption>Chips 215</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 216.svg" alt="Chips 216"><figcaption>Chips 216</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 217.svg" alt="Chips 217"><figcaption>Chips 217</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 218.svg" alt="Chips 218"><figcaption>Chips 218</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 219.svg" alt="Chips 219"><figcaption>Chips 219</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 220.svg" alt="Chips 220"><figcaption>Chips 220</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 221.svg" alt="Chips 221"><figcaption>Chips 221</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 222.svg" alt="Chips 222"><figcaption>Chips 222</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 223.svg" alt="Chips 223"><figcaption>Chips 223</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 224.svg" alt="Chips 224"><figcaption>Chips 224</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 225.svg" alt="Chips 225"><figcaption>Chips 225</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 226.svg" alt="Chips 226"><figcaption>Chips 226</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 227.svg" alt="Chips 227"><figcaption>Chips 227</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 228.svg" alt="Chips 228"><figcaption>Chips 228</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 229.svg" alt="Chips 229"><figcaption>Chips 229</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 230.svg" alt="Chips 230"><figcaption>Chips 230</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 231.svg" alt="Chips 231"><figcaption>Chips 231</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 232.svg" alt="Chips 232"><figcaption>Chips 232</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 233.svg" alt="Chips 233"><figcaption>Chips 233</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 234.svg" alt="Chips 234"><figcaption>Chips 234</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 235.svg" alt="Chips 235"><figcaption>Chips 235</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 236.svg" alt="Chips 236"><figcaption>Chips 236</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 237.svg" alt="Chips 237"><figcaption>Chips 237</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 238.svg" alt="Chips 238"><figcaption>Chips 238</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 239.svg" alt="Chips 239"><figcaption>Chips 239</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 240.svg" alt="Chips 240"><figcaption>Chips 240</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 241.svg" alt="Chips 241"><figcaption>Chips 241</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 242.svg" alt="Chips 242"><figcaption>Chips 242</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 243.svg" alt="Chips 243"><figcaption>Chips 243</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 244.svg" alt="Chips 244"><figcaption>Chips 244</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 245.svg" alt="Chips 245"><figcaption>Chips 245</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 246.svg" alt="Chips 246"><figcaption>Chips 246</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 247.svg" alt="Chips 247"><figcaption>Chips 247</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 248.svg" alt="Chips 248"><figcaption>Chips 248</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 249.svg" alt="Chips 249"><figcaption>Chips 249</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 250.svg" alt="Chips 250"><figcaption>Chips 250</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 251.svg" alt="Chips 251"><figcaption>Chips 251</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 252.svg" alt="Chips 252"><figcaption>Chips 252</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 253.svg" alt="Chips 253"><figcaption>Chips 253</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 254.svg" alt="Chips 254"><figcaption>Chips 254</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 255.svg" alt="Chips 255"><figcaption>Chips 255</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 256.svg" alt="Chips 256"><figcaption>Chips 256</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 257.svg" alt="Chips 257"><figcaption>Chips 257</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 258.svg" alt="Chips 258"><figcaption>Chips 258</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 259.svg" alt="Chips 259"><figcaption>Chips 259</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 260.svg" alt="Chips 260"><figcaption>Chips 260</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 261.svg" alt="Chips 261"><figcaption>Chips 261</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 262.svg" alt="Chips 262"><figcaption>Chips 262</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 263.svg" alt="Chips 263"><figcaption>Chips 263</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 264.svg" alt="Chips 264"><figcaption>Chips 264</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 265.svg" alt="Chips 265"><figcaption>Chips 265</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 266.svg" alt="Chips 266"><figcaption>Chips 266</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 267.svg" alt="Chips 267"><figcaption>Chips 267</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 268.svg" alt="Chips 268"><figcaption>Chips 268</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 269.svg" alt="Chips 269"><figcaption>Chips 269</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 270.svg" alt="Chips 270"><figcaption>Chips 270</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 271.svg" alt="Chips 271"><figcaption>Chips 271</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 272.svg" alt="Chips 272"><figcaption>Chips 272</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 273.svg" alt="Chips 273"><figcaption>Chips 273</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 274.svg" alt="Chips 274"><figcaption>Chips 274</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 275.svg" alt="Chips 275"><figcaption>Chips 275</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 276.svg" alt="Chips 276"><figcaption>Chips 276</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 277.svg" alt="Chips 277"><figcaption>Chips 277</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 278.svg" alt="Chips 278"><figcaption>Chips 278</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 279.svg" alt="Chips 279"><figcaption>Chips 279</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 280.svg" alt="Chips 280"><figcaption>Chips 280</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 281.svg" alt="Chips 281"><figcaption>Chips 281</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 282.svg" alt="Chips 282"><figcaption>Chips 282</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 283.svg" alt="Chips 283"><figcaption>Chips 283</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 284.svg" alt="Chips 284"><figcaption>Chips 284</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 285.svg" alt="Chips 285"><figcaption>Chips 285</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 286.svg" alt="Chips 286"><figcaption>Chips 286</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 287.svg" alt="Chips 287"><figcaption>Chips 287</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 288.svg" alt="Chips 288"><figcaption>Chips 288</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 289.svg" alt="Chips 289"><figcaption>Chips 289</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 290.svg" alt="Chips 290"><figcaption>Chips 290</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 291.svg" alt="Chips 291"><figcaption>Chips 291</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 292.svg" alt="Chips 292"><figcaption>Chips 292</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 293.svg" alt="Chips 293"><figcaption>Chips 293</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 294.svg" alt="Chips 294"><figcaption>Chips 294</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 295.svg" alt="Chips 295"><figcaption>Chips 295</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 296.svg" alt="Chips 296"><figcaption>Chips 296</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 297.svg" alt="Chips 297"><figcaption>Chips 297</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 298.svg" alt="Chips 298"><figcaption>Chips 298</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 299.svg" alt="Chips 299"><figcaption>Chips 299</figcaption></figure>
+        <figure class="chip-card"><img src="image/chips 300.svg" alt="Chips 300"><figcaption>Chips 300</figcaption></figure>
+        <!-- GALLERY:END -->
+    </section>
+</main>
+    <!-- ══ FOOTER ══════════════════════════════════════════════════════════ -->
+<footer>
+    <p>
+        <i class="fa-solid fa-cookie-bite"></i>
+        &copy; 2026 <span>Chips Bizarres</span> — La galerie des chips les plus insolites du monde
+        <i class="fa-solid fa-earth-europe"></i>
+    </p>
+    <p class="footer-hint">
+        <i class="fa-solid fa-circle-info"></i>
+        Cliquez sur une image pour l'agrandir &nbsp;&middot;&nbsp;
+        <i class="fa-solid fa-keyboard"></i>
+        Touches &#8592; &#8594; pour naviguer &nbsp;&middot;&nbsp;
+        <i class="fa-solid fa-xmark"></i>
+        Échap pour fermer
+    </p>
+</footer>
+
+
+<!-- Lightbox -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image agrandie">
+    <button id="lightbox-close" title="Fermer (Échap)"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lb-nav" id="lb-prev" title="Précédent (←)"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="lb-content">
+        <img id="lightbox-img" src="" alt="">
+        <p id="lightbox-caption"></p>
+    </div>
+    <button class="lb-nav" id="lb-next" title="Suivant (→)"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<!-- Back to top button -->
+<button id="back-to-top" title="Retour en haut">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- ══ SCRIPTS ══════════════════════════════════════════════════════════ -->
+<script src="chips.js"></script>
+
+</body>
+</html>
